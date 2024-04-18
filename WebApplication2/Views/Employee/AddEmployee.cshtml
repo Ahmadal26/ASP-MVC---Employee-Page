@@ -2,26 +2,33 @@
 
 <h1>Add Employee</h1>
 
-<form asp-action="Submit" method="post">
-    <div>
-        <label asp-for="EmployeeId">Employee ID:</label>
-        <input asp-for="EmployeeId" />
-    </div>
-    <div>
-        <label asp-for="FirstName">First Name:</label>
-        <input asp-for="FirstName" />
-    </div>
-    <div>
-        <label asp-for="LastName">Last Name:</label>
-        <input asp-for="LastName" />
-    </div>
-    <div>
-        <label asp-for="Email">Email:</label>
-        <input asp-for="Email" />
-    </div>
-    <div>
-        <label asp-for="Department">Department:</label>
-        <input asp-for="Department" />
-    </div>
-    <button type="submit">Submit</button>
-</form>
+
+    <form asp-action="Submit" method="post">
+        <div>
+            <label asp-for="EmployeeId">Employee ID:</label>
+            <span asp-validation-for="EmployeeId" class="validation-message"></span>
+            <input type="text" id="EmployeeId" name="EmployeeId" required placeholder="Add Employee Id " />
+        </div>
+        <div>
+            <label asp-for="FirstName">First Name:</label>
+            <span asp-validation-for="FirstName" class="validation-message"></span>
+            <input type="text" id="FirstName" name="FirstName" required placeholder="Add FirstName " />
+        </div>
+        <div>
+            <label asp-for="LastName">Last Name:</label>
+            <span asp-validation-for="LastName" class="validation-message"></span>
+        <input type="text" id="LastName" name="LastName" required placeholder="Add LastName " />
+        </div>
+        <div>
+            <label asp-for="Email">Email:</label>
+            <span asp-validation-for="Email" class="validation-message"></span>
+        <input type="text" id="Email" name="Email" required placeholder="Add Email " />
+        </div>
+        <div>
+            <label asp-for="Department">Department:</label>
+            <span asp-validation-for="Department" class="validation-message"></span>
+            <input type="text" id="Department" name="Department" required placeholder="Add Department " />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
